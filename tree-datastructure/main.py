@@ -28,3 +28,13 @@ class binary_search_tree:
                 self._insert(value, curr_node.right_child)
         else:
             print "Value already in tree!"
+
+    def print_tree(self):
+        if self.root != None:
+            self._print_true(self.root)
+
+    def _print_tree(self, curr_node):
+        if curr_node != None:
+            self._print_tree(curr_node.left_child)
+            print str(curr_node.value)
+            self._print_tree(curr_node.right_child)
