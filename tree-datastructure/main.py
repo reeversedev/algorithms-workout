@@ -31,10 +31,24 @@ class binary_search_tree:
 
     def print_tree(self):
         if self.root != None:
-            self._print_true(self.root)
+            self._print_tree(self.root)
 
     def _print_tree(self, curr_node):
         if curr_node != None:
             self._print_tree(curr_node.left_child)
             print str(curr_node.value)
             self._print_tree(curr_node.right_child)
+
+
+def fill_tree(tree, num_elems=100, max_int=1000):
+    from random import randint
+    for _ in range(num_elems):
+        curr_elem = randint(0, max_int)
+        tree.insert(curr_elem)
+    return tree
+
+
+tree = binary_search_tree()
+tree = fill_tree(tree)
+
+tree.print_tree()
