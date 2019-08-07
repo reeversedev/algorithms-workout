@@ -16,3 +16,29 @@ function linearSearch(value, list) {
   }
   return position;
 }
+
+// binarySearch Algorithm
+// can be used for large Arrays because getting a result with this is much faster
+
+function binarySearch(value, list) {
+  let first = 0;
+  let last = list.length - 1;
+  let found = false;
+  let position = -1;
+  let middle;
+
+  while (found === false && first <= last) {
+    middle = Math.floor((first + last) / 2);
+
+    if (list[middle] == value) {
+      position = middle;
+      found = true;
+    } else if (list[middle] > value) {
+      // comes in lower area
+      last = middle - 1;
+    } else {
+      first = middle + 1;
+    }
+  }
+  return position;
+}
