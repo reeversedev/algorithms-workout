@@ -1,4 +1,4 @@
-Array.prototype.eachColor = function(callback) {
+Array.prototype.eacheachAlbum = function(callback) {
   for (var i = 0; i < this.length; i++) {
     callback(this[i], i, this);
   }
@@ -6,11 +6,17 @@ Array.prototype.eachColor = function(callback) {
 
 // we gotta test it now
 
-var arr = ['orange', 'red', 'yellow'];
+var logicAlbums = [
+  'Bobby Tarantino',
+  'The Incredible True Story',
+  'Supermarket',
+  'Under Pressure'
+];
 
-arr.eachColor(function(word) {
+logicAlbums.eacheachAlbum(function(word) {
   console.log(word);
-  // orange
-  // red
-  // yellow
+  // Bobby Tarantino,
+  // The Incredible True Story,
+  // Supermarket,
+  // Under Pressure;
 });
