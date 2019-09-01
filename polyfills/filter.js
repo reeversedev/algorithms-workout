@@ -25,3 +25,10 @@ logicAlbums.filterAlbums(function(album) {
   return album.rating > 4.9;
 });
 console.log(logicAlbums);
+
+// [
+//   { name: 'Bobby Tarantino', rating: 5 },
+//   { name: 'The Incredible True Story', rating: 4.5 },
+//   { name: 'Supermarket', rating: 4.9 },
+//   { name: 'Under Pressure', rating: 5 }
+// ];
