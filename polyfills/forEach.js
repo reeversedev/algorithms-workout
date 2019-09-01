@@ -1,4 +1,4 @@
-Array.prototype.everyEach = function(callback) {
+Array.prototype.eachColor = function(callback) {
   for (var i = 0; i < this.length; i++) {
     callback(this[i], i, this);
   }
@@ -8,7 +8,7 @@ Array.prototype.everyEach = function(callback) {
 
 var arr = ['orange', 'red', 'yellow'];
 
-arr.everyEach(function(word) {
+arr.eachColor(function(word) {
   console.log(word);
   // orange
   // red
