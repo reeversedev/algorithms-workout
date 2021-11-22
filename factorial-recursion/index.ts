@@ -1,4 +1,4 @@
-function computeFactorial(num: number) {
+function computeFactorial(num: number): number {
   if (num <= 1) {
     return 1;
   } else {
